@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,11 +14,35 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleToFill" id="dK9-GN-2oZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="X02-ua-Fyk">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mBv-oh-Ct4" userLabel="Root Stack View">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="gTZ-h5-iVE">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                    </imageView>
+                                </subviews>
+                                <variation key="heightClass=compact" distribution="fill"/>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="Tai-Mq-TuQ" firstAttribute="trailing" secondItem="mBv-oh-Ct4" secondAttribute="trailing" id="7rn-Dq-rH5"/>
+                            <constraint firstItem="Tai-Mq-TuQ" firstAttribute="bottom" secondItem="X02-ua-Fyk" secondAttribute="bottom" id="L6u-Zq-K9N"/>
+                            <constraint firstItem="mBv-oh-Ct4" firstAttribute="top" secondItem="Tai-Mq-TuQ" secondAttribute="top" id="Wzz-U8-mce"/>
+                            <constraint firstItem="mBv-oh-Ct4" firstAttribute="leading" secondItem="Tai-Mq-TuQ" secondAttribute="leading" id="dCP-gT-W1e"/>
+                            <constraint firstItem="Tai-Mq-TuQ" firstAttribute="trailing" secondItem="X02-ua-Fyk" secondAttribute="trailing" id="lJz-Qm-FGI"/>
+                            <constraint firstItem="Tai-Mq-TuQ" firstAttribute="bottom" secondItem="mBv-oh-Ct4" secondAttribute="bottom" id="oRK-HL-xWJ"/>
+                            <constraint firstItem="X02-ua-Fyk" firstAttribute="leading" secondItem="Tai-Mq-TuQ" secondAttribute="leading" id="sbM-Fh-3xo"/>
+                            <constraint firstItem="X02-ua-Fyk" firstAttribute="top" secondItem="Tai-Mq-TuQ" secondAttribute="top" id="y6H-ZD-TIX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tai-Mq-TuQ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -22,4 +50,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="667" height="621.5"/>
+        <image name="logo" width="122" height="67"/>
+    </resources>
 </document>
